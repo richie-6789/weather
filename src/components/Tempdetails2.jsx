@@ -1,7 +1,4 @@
 import React from 'react'
-import {
-    UilLocationPoint,
-  } from "@iconscout/react-unicons";
 
 import { iconUrlFromCode } from '../services/weatherService'
 
