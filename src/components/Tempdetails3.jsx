@@ -3,12 +3,9 @@ import {
     UilWind,
     UilSunset,
     UilSun,
-    UilTemperatureHalf,
-    UilBrightness,
     UilEye,
     UilTear,
     UilWater,
-    UilRaindropsAlt
   } from "@iconscout/react-unicons";
 import { formatToLocalTime4 } from '../services/weatherService';
 
@@ -46,10 +43,10 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
 
 
   return (
-    <div className='mx-2 text-white bg-gray-950 px-4 py-8 rounded-3xl'>
+    <div className='mx-2 text-white bg-gray-950 p-8 mb-6 rounded-3xl'>
     
-        <h2 className='px-4'>Todays Highlights</h2>
-        <div className='grid grid-cols-2'>
+        <h2 className=''>Todays Highlights</h2>
+        <div className='grid lg:grid-cols-2'>
 
             <div className='bg-gray-900 rounded-3xl px-5 py-3 m-4'>
                 <div className='flex flex-row justify-between items-center mt-2'>
@@ -58,10 +55,10 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                     <AQI aqi={aqi} />
                     
                 </div>
-                <div className='flex flex-row justify-evenly items-center my-4'>
+                <div className='flex flex-row justify-around items-center my-4'>
                     <span><UilWind size={45}/></span>
 
-                    <ul className='flex flex-row ml-4'>
+                    <ul className='flex flex-row ml-4 justify-between'>
                         <li className='mx-2 text-center'>
                             <p className='text-gray-400 text-xs text-center mx-2 mb-2'>PM<sub>2.5</sub></p>
                             <p className='text-3xl'>{pm2_5.toFixed()}</p>
@@ -85,7 +82,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
             <div className='bg-gray-900 rounded-3xl px-5 py-3 m-4'>
                 <h3 className='text-sm text-gray-300 mt-3'>Sunrise & Sunset</h3>
 
-                <div className='flex flex-row justify-between items-center my-4'>
+                <div className='flex flex-row justify-around lg:justify-between items-center my-4'>
                     <div className='flex flex-row justify-between items-center'>
                         <span><UilSun size={45}/></span>
 
@@ -106,7 +103,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
             </div>
         </div>
 
-        <div className='grid grid-cols-4 mx-3'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-4 mx-3'>
             <div className='bg-gray-900 rounded-3xl px-4 py-5 m-4'>
                 <h3 className='text-sm text-gray-300'>Humidity</h3>
                 <div className='flex flex-row mt-6 justify-between items-center'>

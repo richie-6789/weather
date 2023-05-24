@@ -31,13 +31,13 @@ function Forcast({title, items}) {
 
 
 
-        <div className="bg-zinc-950 rounded-3xl py-4 px-8 my-4 mx-2">
-            <div className="flex justify-start items-center my-4">
+        <div className="bg-zinc-950 rounded-3xl p-8 mx-2">
+            <div className="flex justify-start items-center">
                 <p className="text-white">{title}</p>
             </div>
 
             
-                <div className="flex flex-row items-center justify-between text-white my-2 ">
+                <div className="flex flex-row items-center justify-between text-white my-6 ">
                     {items.slice(0, 8).map((item) => (
                         <div className="flex flex-col items-center justify-center bg-gray-900 rounded-2xl p-4 md:w-24">
                         <p className="font-light text-sm">{item.title}</p>

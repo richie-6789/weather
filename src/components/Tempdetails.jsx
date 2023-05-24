@@ -10,7 +10,7 @@ import { formatToLocalTime4 } from '../services/weatherService'
 function Tempdetails({weather: {details, icon, temp, dt, timezone, name, country}, selectedUnit, units, a}) {
   return (
 
-    <div className="mb-6 min-w-min bg-zinc-950 text-white rounded-3xl p-8 md:h-80 md:w-80">
+    <div className="mb-6 min-w-min bg-zinc-950 text-white rounded-3xl p-8 h-80 md:w-80 ">
         <h2 className='px-3'>Now</h2>
 
         <div className='flex flex-row items-center justify-between'>

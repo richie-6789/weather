@@ -7,9 +7,9 @@ function TimeandLocation({weather: {dt, timezone, name, country}}) {
     <div className=''>
       <div className=" flex items-center justify-center">
         
-          <p className="text-white text-2xl font-normal">{`${name}, ${country}`}</p>
-          " "
-          <p className='text-white text-xl font-extralight'>
+          <p className="text-white text-md md:text-2xl font-normal">{`${name}, ${country}`}</p>
+          &nbsp;&nbsp;
+          <p className='text-white text-md md:text-xl font-extralight'>
             
             {formatToLocalTime1(timezone)}
             

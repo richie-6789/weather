@@ -9,11 +9,11 @@ function Tempdetails2({items}) {
   return (
     <div className='text-white'>
         
-        <div className='bg-zinc-950 rounded-3xl px-4 py-6'>
-            <h2 className='mx-4 mb-4'>5 day forecast</h2>
+        <div className='bg-zinc-950 rounded-3xl py-8 px-4 md:w-80  '>
+            <h2 className='px-3 mb-3'>5 day forecast</h2>
             <ul>
                 {items.filter((e,i) => i % 8 === 7).map((item) => (
-                    <li className='flex m-2 justify-between items-center'>
+                    <li className='flex mx-2  justify-between items-center'>
                         <div className='flex items-center'>
                             
                             <img 
