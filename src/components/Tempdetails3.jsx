@@ -18,20 +18,20 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
         aqiColor = '';
     
         if (aqi === 1) {
-        aqiText = 'Good';
-        aqiColor = 'bg-green-500';
+            aqiText = 'Good';
+            aqiColor = 'bg-green-500';
         } else if (aqi === 2) {
-        aqiText = 'Fair';
-        aqiColor = 'bg-yellow-500';
+            aqiText = 'Fair';
+            aqiColor = 'bg-yellow-500';
         } else if (aqi === 3) {
-        aqiText = 'Moderate';
-        aqiColor = 'bg-orange-500';
+            aqiText = 'Moderate';
+            aqiColor = 'bg-orange-500';
         } else if (aqi === 4) {
-        aqiText = 'Poor';
-        aqiColor = 'bg-red-500';
+            aqiText = 'Poor';
+            aqiColor = 'bg-red-500';
         } else {
-        aqiText = 'Very Poor';
-        aqiColor = 'bg-[#8B0000]';
+            aqiText = 'Very Poor';
+            aqiColor = 'bg-[#8B0000]';
         }
     
         return (
@@ -43,12 +43,12 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
 
 
   return (
-    <div className='mx-2 text-white bg-gray-950 p-8 mb-6 rounded-3xl'>
+    <div className='mx-2 text-white bg-gray-950 p-5 md:p-8 mb-6 rounded-3xl'>
     
         <h2 className=''>Todays Highlights</h2>
         <div className='grid lg:grid-cols-2'>
 
-            <div className='bg-gray-900 rounded-3xl px-5 py-3 m-4'>
+            <div className='bg-gray-900 rounded-3xl px-5 py-3 m-2 md:m-4'>
                 <div className='flex flex-row justify-between items-center mt-2'>
                     <h3 className='text-sm text-gray-300'>Air Quality Index</h3>
                     
@@ -61,25 +61,25 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                     <ul className='flex flex-row ml-4 justify-between'>
                         <li className='mx-2 text-center'>
                             <p className='text-gray-400 text-xs text-center mx-2 mb-2'>PM<sub>2.5</sub></p>
-                            <p className='text-3xl'>{pm2_5.toFixed()}</p>
+                            <p className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{pm2_5.toFixed()}</p>
                         </li>
                         <li className='mx-2 text-center'>
                             <p className='text-gray-400 text-xs text-center mx-2 mb-2'>SO<sub>2</sub></p>
-                            <p className='text-3xl'>{so2}</p>                                
+                            <p className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{so2}</p>                                
                         </li>
                         <li className='mx-2 text-center'>
                             <p className='text-gray-400 text-xs text-center mx-2 mb-2'>NO<sub>2</sub></p>
-                            <p className='text-3xl'>{no2}</p>
+                            <p className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{no2}</p>
                         </li>
                         <li className='mx-2 text-center'>
-                            <p className='text-gray-400 text-xs text-center mx-2 mb-2'>O<sub>23</sub></p>
-                            <p className='text-3xl'>{o3}</p>
+                            <p className='text-gray-400 text-xs text-center mx-2 mb-2'>O<sub>3</sub></p>
+                            <p className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{o3}</p>
                         </li>
                     </ul>
                 </div>   
             </div>
 
-            <div className='bg-gray-900 rounded-3xl px-5 py-3 m-4'>
+            <div className='bg-gray-900 rounded-3xl px-5 py-3 m-2 md:m-4'>
                 <h3 className='text-sm text-gray-300 mt-3'>Sunrise & Sunset</h3>
 
                 <div className='flex flex-row justify-around lg:justify-between items-center my-4'>
@@ -88,7 +88,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
 
                         <div className='mx-2'>
                             <p className='text-gray-400 text-xs mb-2'>Sunrise</p>
-                            <span className='text-3xl'>{formatToLocalTime4(sunrise, timezone, "hh:mm A")}</span>
+                            <span className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{formatToLocalTime4(sunrise, timezone, "hh:mm A")}</span>
                         </div>
                     </div>
                     <div className='flex flex-row justify-between items-center'>
@@ -96,7 +96,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
 
                         <div className='mx-2'>
                             <p className='text-gray-400 text-xs mb-2'>Sunset</p>
-                            <span className='text-3xl'>{formatToLocalTime4(sunset, timezone, "hh:mm A")}</span>
+                            <span className='text-xl md:text-3xl lg:text-xl xl:text-3xl'>{formatToLocalTime4(sunset, timezone, "hh:mm A")}</span>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                 <h3 className='text-sm text-gray-300'>Humidity</h3>
                 <div className='flex flex-row mt-6 justify-between items-center'>
                     <span><UilTear size={45}/></span>
-                    <p className='text-3xl'>{humidity}<small>%</small></p>
+                    <p className='text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{humidity}<small>%</small></p>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                 <div className='flex flex-row mt-6 justify-between items-center'>
                     <span><UilWater size={40}/></span>
                     
-                    <p className='text-3xl'>{pressure}<small>mb</small></p>
+                    <p className='text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{pressure}<small>mb</small></p>
                 </div>
             </div>
 
@@ -125,7 +125,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                 <h3 className='text-sm text-gray-300'>Visibilty</h3>
                 <div className='flex flex-row mt-6 justify-between items-center'>
                     <span><UilEye size={45}/></span>
-                    <p className='text-3xl'>{visibility/100}<small>km</small></p>
+                    <p className='text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{visibility/100}<small>km</small></p>
                 </div>
             </div>
 
@@ -133,7 +133,7 @@ function Tempdetails3({weather: {sunrise, sunset,timezone, humidity, pressure, v
                 <h3 className='text-sm text-gray-300'>Wind</h3>
                 <div className='flex flex-row mt-6 justify-between items-center'>
                     <span><UilWind size={40}/></span>
-                    <p className='text-3xl'>{speed}<small>m/s</small> </p>
+                    <p className='text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl'>{speed}<small>m/s</small> </p>
                 </div>
             </div>
         </div>

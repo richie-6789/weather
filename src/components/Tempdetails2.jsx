@@ -6,7 +6,7 @@ function Tempdetails2({items}) {
   return (
     <div className='text-white'>
         
-        <div className='bg-zinc-950 rounded-3xl py-8 px-4 md:w-80  '>
+        <div className='bg-zinc-950 rounded-3xl py-8 px-4 md:w-80 '>
             <h2 className='px-3 mb-3'>5 day forecast</h2>
             <ul>
                 {items.filter((e,i) => i % 8 === 7).map((item) => (

@@ -57,7 +57,7 @@ function App() {
   // fetchWeather();
   
   return (
-    <div className='py-5 md:px-12 lg:px-20 bg-neutral-800 h-fit shadow-xl shadow-gray-400'>
+    <div className='py-5 md:px-12 lg:px-0 xl:px-14 2xl:px-20 bg-neutral-800 h-fit shadow-xl shadow-gray-400'>
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
 
@@ -68,7 +68,7 @@ function App() {
         <div>
           <TimeandLocation weather={weather} />
           <div className='flex flex-col lg:flex-row mx-2 my-6 justify-between'>
-            <div className='flex flex-col md:flex-row justify-between lg:flex-col mx-1 mb-5'>
+            <div className='flex flex-col md:flex-row justify-evenly lg:flex-col mx-1 mb-5'>
               <Tempdetails weather={weather}/>
               <Tempdetails2 items={weather.list} />
             </div>
